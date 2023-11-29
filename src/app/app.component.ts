@@ -11,10 +11,10 @@ import { GoogleBooksService } from './books.service';
 export class AppComponent {
   title = 'ksiegarnia';
 
-  public books$: Observable<Book[]>;
+  public books: Observable<Book[]>;
   constructor(
     @Inject(GoogleBooksService) private bookService: GoogleBooksService
   ) {
-    this.books$ = this.bookService.searchBooks('Mickiewicz');
+    this.books = this.bookService.searchBooks('Mickiewicz');
   }
 }

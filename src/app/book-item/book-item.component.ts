@@ -8,19 +8,4 @@ import { Book } from '../books.model';
 })
 export class BookItemComponent {
   @Input() book?: Book;
-
-  get title() {
-    return this.book?.volumeInfo.title;
-  }
-
-  get description() {
-    return this.book?.volumeInfo.description;
-  }
-
-  get thumbnail(): string | boolean {
-    if (this.book?.volumeInfo.imageLinks) {
-    }
-
-    return false;
-  }
 }
