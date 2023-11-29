@@ -15,10 +15,10 @@ export class GoogleBooksService {
     return this.http.get<any>(`${this.url}'${searchTerm}`).pipe(
       map((response) => {
         return response['items'].map(
-          (item: { volumeInfo: { title: string; description: string } }) => {
+          (book: { volumeInfo: { title: string; description: string } }) => {
             return {
-              title: item.volumeInfo.title,
-              description: item.volumeInfo.description,
+              title: book.volumeInfo.title,
+              description: book.volumeInfo.description,
             };
           }
         );
