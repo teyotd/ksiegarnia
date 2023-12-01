@@ -1,1 +1,6 @@
-<app-book-item *ngFor="let book of books | async" [book]="book"></app-book-item>
+<div class="fxrow fxcenter">
+  <app-book-item
+    *ngFor="let book of books | async"
+    [book]="book"
+  ></app-book-item>
+</div>

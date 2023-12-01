@@ -15,6 +15,6 @@ export class AppComponent {
   constructor(
     @Inject(GoogleBooksService) private bookService: GoogleBooksService
   ) {
-    this.books = this.bookService.searchBooks('Mickiewicz');
+    this.books = this.bookService.searchBooks('Slowacki');
   }
 }

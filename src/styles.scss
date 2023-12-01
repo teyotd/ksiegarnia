@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.fxrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.fxcol {
+  display: flex;
+  flex-direction: column;
+}
+
+app-book-item {
+  width: 22%;
+  padding: 12px;
+  .despription {
+    height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  img {
+    height: 150px;
+  }
+}
+
+.fxcenter {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

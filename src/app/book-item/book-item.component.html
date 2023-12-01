@@ -1,1 +1,5 @@
-<span>{{ book?.title }}</span> <span>{{ book?.description }}</span>
+<div class="fxcol">
+  <img [src]="book?.img" />
+  <strong>{{ book?.title }}</strong>
+  <p class="despription" *ngIf="book?.description">{{ book?.description }}</p>
+</div>
