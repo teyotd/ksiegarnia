@@ -15,10 +15,19 @@ export class GoogleBooksService {
     return this.http.get<any>(`${this.url}'${searchTerm}`).pipe(
       map((response) => {
         return response['items'].map(
-          (book: { volumeInfo: { title: string; description: string } }) => {
+          (book: {
+            volumeInfo: {
+              title: string;
+              description: string;
+              imageLinks: {
+                smallThumbnail: string;
+              };
+            };
+          }) => {
             return {
               title: book.volumeInfo.title,
               description: book.volumeInfo.description,
+              img: book.volumeInfo.imageLinks?.smallThumbnail,
             };
           }
         );

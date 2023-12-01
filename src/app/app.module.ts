@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { BookItemComponent } from './book-item/book-item.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { BookSearchComponent } from './book-search/book-search.component';
 
 @NgModule({
-  declarations: [AppComponent, BookItemComponent],
+  declarations: [AppComponent, BookItemComponent, BookSearchComponent],
   imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
